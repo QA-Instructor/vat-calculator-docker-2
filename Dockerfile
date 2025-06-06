@@ -7,6 +7,7 @@ WORKDIR /app
 COPY package.json .
 
 # download the project dependencies
+# added --ignore-scripts as recommended by Sonarqube
 RUN npm install --ignore-scripts
 
 # copy everything from the react app folder to the /app folder in the container
