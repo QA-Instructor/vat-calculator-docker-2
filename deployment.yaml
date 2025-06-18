@@ -24,12 +24,15 @@ spec:
             requests:
               memory: "8Mi"
               cpu: "50m"
+              ephemeral-storage: "2Gi"
             limits:
               memory: "16Mi"
               cpu: "100m"
+              ephemeral-storage: 4Gi"
           ports:
           - containerPort: 80
-            name: lbgcalc          
+            name: lbgcalc     
+      automountServiceAccountToken: false     
     
 ---
 apiVersion: v1
