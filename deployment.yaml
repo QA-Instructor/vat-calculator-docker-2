@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -33,6 +34,7 @@ spec:
           ports:
           - containerPort: 80
             name: lbgcalc
+            
 ---
 apiVersion: v1
 kind: Service
