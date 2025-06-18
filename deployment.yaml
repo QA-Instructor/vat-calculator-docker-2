@@ -16,6 +16,7 @@ spec:
         app: lbgcalc
         tier: lbgcalc
     spec:
+      automountServiceAccountToken: false
       containers:
         - name: lbgcalc
           image: victorialloyd/vat:latest
@@ -31,9 +32,7 @@ spec:
               ephemeral-storage: 4Gi"
           ports:
           - containerPort: 80
-            name: lbgcalc     
-      automountServiceAccountToken: false     
-    
+            name: lbgcalc
 ---
 apiVersion: v1
 kind: Service
